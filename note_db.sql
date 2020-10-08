@@ -19,8 +19,10 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `note_db`
 --
-
--- --------------------------------------------------------
+CREATE DATABASE IF NOT EXISTS note_db CHARACTER SET utf8;
+CREATE USER 'test'@'localhost' IDENTIFIED BY 'test';
+GRANT ALL PRIVILEGES ON note_db.* TO 'test'@'localhost';
+-- 
 
 --
 -- Structure de la table `admin`
